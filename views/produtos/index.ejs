@@ -1,0 +1,45 @@
+<%- include('../partials/head.ejs'); %>
+<%- include('../partials/navbarjogos.ejs'); %>
+      
+      
+    <div class="container">
+        <h1>Lista de Jogos</h1> 
+    </div>
+   <hr>
+   <div class="container">
+
+    <table class = "table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Titulo</th>
+                <th>Preço</th>
+                <th>Lançamento</th>
+                <th>Sinopse</th>
+                <th>Ações</th>
+                
+            </tr>
+        </thead>
+        <% produtos.forEach( produto => { %>  
+        <tbody>
+         
+         <th><%=produto.id %></th>
+         <th><%=produto.nome%></th>
+         <th><%=produto.preco%></th>
+         <th><%=produto.lançamento%></th>
+         <th><%=produto.sinopse%></th>
+         <th>
+            <a  class=" btn btn-warning" href="/product/edit/<%= produto.id %>">Editar</a>
+            <form method="POST" action="/product/delete/<%= produto.id %>">
+                <button  class=" btn btn-danger">Deletar</button>
+            </form>
+         </th>
+         <%  }) %>
+        </tbody>
+      
+    
+    
+       </table>
+   </div>
+    
+<%- include('../partials/foot.ejs'); %>

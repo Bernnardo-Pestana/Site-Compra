@@ -1,0 +1,52 @@
+<%- include('../partials/head.ejs'); %>
+<%- include('../partials/navbarjogos.ejs'); %>
+      
+      
+    <div class="container">
+        <h1>Criar Jogo</h1>
+    </div>
+   <hr>
+
+   <form method="POST" action="/product">
+
+    <div class="container">
+       <div class="card-body">
+    
+        <div class="input-group mb-3" >
+            <div class="input-group-append" >
+                <span class="input-group-text" >Nome do Jogo</span>
+            </div>
+            <input type="text" class="form-control" name="nome" placeholder="Nome">
+        </div>
+
+        <div class="input-group mb-3 " >
+            <div class="input-group-append" >
+                <span class="input-group-text" >Preço do Jogo</span>
+            </div>
+            <input type="number" class="form-control" name="preco" placeholder="R$00,00">
+        </div>
+
+        <div class="input-group mb-3" >
+            <div class="input-group-append" >
+                <span class="input-group-text" >Data de lançamento</span>
+            </div>
+            <input type="number" class="form-control" name="lançamento" placeholder="lançamento">
+        </div>
+
+        <div class="input-group mb-3" >
+            <div class="input-group-append" >
+                <span class="input-group-text" >Sinopse do Jogo</span>
+            </div>
+            <textarea  class="form-control" name="sinopse" placeholder="Sinopse" rows="5"></textarea>
+        </div>
+
+       
+       </div>
+       <button type="submit" class="btn btn-success  btn-block" >Criar</button>
+    </div>
+    
+   </form>
+
+
+    
+<%- include('../partials/foot.ejs'); %>

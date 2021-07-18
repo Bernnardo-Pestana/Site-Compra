@@ -1,0 +1,20 @@
+Legenda: 
+vv -- completo
+xx -- nao iniciado
+
+ii -- incompleto
+
+
+Fazer :
+pagina cadastrar jogos: Nome  - preço - sinopse - ano de lançamento. --------- xx
+Pagina editar jogos --------- vv
+       Deletar jogos --------- vv
+Pagina  Mostra jogos --------- vv
+
+navBar para Jogos --------- vv
+
+
+Fazer pagina com açoes para comprar o jogo == adicionar ao carrinho de compras. --------- xx
+
+futuro: ???????
+

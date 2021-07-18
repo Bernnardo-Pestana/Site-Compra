@@ -1,0 +1,38 @@
+<%- include('./partials/head.ejs'); %>
+
+<%- include('./partials/navbar.ejs'); %>
+      
+    <div class="container">
+        <h1>Ola</h1> 
+        <button onclick= ver_carrinho()> Ver carrinho</button>
+        <button onclick= teste()> vamos ver se funciona</button>
+    </div>
+
+    <hr>
+
+
+    <div class="container">      
+        <% produtos.forEach( produto => { %>        
+           <div class="card-header">
+            <%=produto.id %> 
+           </div>
+           <div class="card-body">
+           <form action = "/product/<%= produto.id %>" method="GET"> 
+            <%=produto.nome %>
+            <%=produto.preco %>
+            <button class="btn btn-secondary"> add_carrinho</button>
+           </form>
+        </div>
+            <%  }) %>  
+    </div>
+
+
+       
+    
+<%- include('./partials/foot.ejs'); %>
+
+
+
+
+
+

@@ -1,0 +1,44 @@
+<%- include('../partials/head.ejs'); %>
+<%- include('../partials/navbar.ejs'); %>
+      
+    <div class ="container">
+        <% jogo.forEach( inf=> {  %>
+            <div class="container">
+                <div class="card-body">               
+                    <input type="hidden"  id = "id" name="id" value="<%= inf.id %>" >
+                 <div class="input-group mb-3" >
+                     <div class="input-group-append" >
+                         <span class="input-group-text" >Nome do Jogo</span>
+                     </div>
+                     <input type="text" class="form-control"  id = "nome" name="nome" placeholder="<%=inf.nome %>" value=" <%=inf.nome %> ">
+                 </div>
+         
+                 <div class="input-group mb-3 " >
+                     <div class="input-group-append" >
+                         <span class="input-group-text" >Preço do Jogo</span>
+                     </div>
+                     <input type="number" class="form-control"  id = "preco" name="preco" placeholder="<%=inf.preco %>" value="<%=inf.preco %>">
+                 </div>
+         
+                 <div class="input-group mb-3" >
+                     <div class="input-group-append" >
+                         <span class="input-group-text" >Data de lançamento</span>
+                     </div>
+                     <input type="number" class="form-control" name="lançamento" placeholder="<%=inf.lançamento %>">
+                 </div>
+         
+                 <div class="input-group mb-3" >
+                     <div class="input-group-append" >
+                         <span class="input-group-text" >Sinopse do Jogo</span>
+                     </div>
+                     <textarea  class="form-control" name="sinopse" placeholder="Sinopse" rows="5"><%=inf.sinopse %></textarea>
+                 </div>
+         
+                 <button class="btn btn-secondary" onclick="add_carrinho()">Add Carrinho</button>
+                 <button class="btn btn-secondary" onclick="ver_carrinho()">ver Carrinho</button>
+                </div>
+             </div>
+        <% }) %>
+
+
+        <%- include('../partials/foot.ejs'); %>
